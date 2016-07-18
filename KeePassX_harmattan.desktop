@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Terminal=false
+Name=KeePassX
+Exec=/usr/bin/invoker --type=d -s /opt/KeePassX/bin/KeePassX
+Icon=/usr/share/icons/hicolor/80x80/apps/KeePassX80.png
+X-Window-Icon=
+X-HildonDesk-ShowInToolbar=true
+X-Osso-Type=application/x-executable
