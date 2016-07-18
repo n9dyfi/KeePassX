@@ -1,23 +1,36 @@
 import QtQuick 1.1
 import com.nokia.meego 1.0
+//import com.nokia.extras 1.1
+
 
 Page {
-    tools: commonTools
 
-    Label {
-        id: label
-        anchors.centerIn: parent
-        text: qsTr("Hello world!")
-        visible: false
+    signal menuFileClicked(string page)
+    signal menuEntriesClicked(string page)
+    signal menuGroupsClicked(string page)
+    signal menuViewClicked(string page)
+    signal menuExtrasClicked(string page)
+    signal menuHelpClicked(string page)
+
+    // Instantiate the Header component (defined in Header.qml)
+    Header {
+        id: header
+        headerText: "KeePassX"
     }
 
-    Button{
-        anchors {
-            horizontalCenter: parent.horizontalCenter
-            top: label.bottom
-            topMargin: 10
-        }
-        text: qsTr("Click here!")
-        onClicked: label.visible = true
+    // Instantiate the Tools component (defined in EditTools.qml)
+    MainTools{
+        id: commonTools
     }
+
+    // Instantiate the MainMenu component (defined in MainMenu.qml)
+    MainMenu {
+        id: mainMenu
+    }
+
+    // Event handlers
+    onMenuFileClicked: {
+        pageStack.push(Qt.resolvedUrl(page));
+    }
+
 }

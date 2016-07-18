@@ -30,7 +30,25 @@ CONFIG += qdeclarative-boostable
 # CONFIG += qt-components
 
 # The .cpp file which was generated for your project. Feel free to hack it.
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    crypto/yarrow.cpp \
+    crypto/twofish.cpp \
+    crypto/twoclass.cpp \
+    crypto/sha256.cpp \
+    crypto/arcfour.cpp \
+    crypto/aestab.c \
+    crypto/aeskey.c \
+    crypto/aescrypt.c \
+    crypto/aes_modes.c \
+    lib/tools.cpp \
+    lib/SecString.cpp \
+    lib/random.cpp \
+    kdb3database.cpp \
+    database.cpp \
+    menumodel.cpp \
+    menufilemodel.cpp \
+    mainwindow.cpp \
+    KpxConfig.cpp
 
 # Please do not modify the following two lines. Required for deployment.
 include(qmlapplicationviewer/qmlapplicationviewer.pri)
@@ -44,3 +62,28 @@ OTHER_FILES += \
     qtc_packaging/debian_harmattan/control \
     qtc_packaging/debian_harmattan/compat \
     qtc_packaging/debian_harmattan/changelog
+
+HEADERS += \
+    crypto/yarrow.h \
+    crypto/twofish.h \
+    crypto/twoclass.h \
+    crypto/sha256.h \
+    crypto/arcfour.h \
+    crypto/aestab.h \
+    crypto/aesopt.h \
+    crypto/aescpp.h \
+    crypto/aes_types.h \
+    crypto/aes_endian.h \
+    crypto/aes.h \
+    lib/tools.h \
+    lib/SecString.h \
+    lib/random.h \
+    plugins/interfaces/IIconTheme.h \
+    kdb3database.h \
+    database.h \
+    keepassx.h \
+    menumodel.h \
+    menufilemodel.h \
+    mainwindow.h \
+    main.h \
+    KpxConfig.h
